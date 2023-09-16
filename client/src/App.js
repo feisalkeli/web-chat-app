@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
+import "./App.css";
+import VideoPlayer from "./components/VideoPlayer";
+import Options from "./components/Options";
+import Notifications from "./components/Notifications";
+import Wrapper from "./components/Wrapper";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container" id="app">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid bg-transparent w-full">
+          <span class="navbar-brand mb-0 h1">Chat Appplication</span>
+        </div>
+      </nav>
+
+      <VideoPlayer />
+      <Options>
+        <Notifications />
+      </Options>
     </div>
   );
 }
